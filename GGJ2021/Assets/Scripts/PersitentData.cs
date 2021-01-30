@@ -16,10 +16,9 @@ public class PersitentData : MonoBehaviour
     public float globalTimeLeft;
     public bool start = false;
     public bool waitingForInput = false;
-    public int outcome = -1;
 
     public int successes;
-    public int failures;
+
 
     private void Awake() {
         if(_instance != null && _instance != this){
@@ -37,9 +36,15 @@ public class PersitentData : MonoBehaviour
         globalTimer.text = "" + cleanGlobalTimer;
         if(globalTimeLeft <= 0)
         {
-            //load end scene
+            SceneManager.LoadScene(SceneManager.sceneCount);
         }
 
+    }
+
+    public void randomNextScene()
+    {
+        var random = Random.Range(1, SceneManager.sceneCount);
+        LoadScene(random);
     }
 
     public void LoadScene(int _scene)
@@ -47,24 +52,13 @@ public class PersitentData : MonoBehaviour
         StartCoroutine(Transition(_scene));
     }
 
-    public void displayOutcome(int _outcome)
-    {
-        if(_outcome == 1){
-            //show check sprite
-            successes++;
-        } 
-        else if (_outcome == -1)
-        {
-            //show x sprite
-            failures++;
-        }
-    }
 
     IEnumerator Transition(int _scene) 
     {
         yield return StartCoroutine(FadeInScreen(0.5f));
-        displayOutcome(outcome);
-        outcome = -1;
+        //"Ding!"
+        Debug.Log("Succeed");
+        successes++;
         SceneManager.LoadScene(_scene);
     
         yield return StartCoroutine(FadeOutScreen(1));
@@ -79,7 +73,7 @@ public class PersitentData : MonoBehaviour
         tutorialUI.SetActive(false);
         inputHandler = GameObject.FindGameObjectWithTag("inputHandler");
         inputHandler.SetActive(true);
-        //enable input manager or something?
+
 
     }
     
