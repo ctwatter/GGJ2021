@@ -12,6 +12,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "StartMinigame",
+                    "type": "Button",
+                    "id": "39fd0897-2bdf-473d-bb32-e5c522e8cc19",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -23,6 +31,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "BabyButtonMash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "015bd16a-69b2-4b10-8cc7-dd3cfa05134e",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartMinigame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d25f51a-29f9-4f4a-9c3f-a8be9443df9f",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartMinigame",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
