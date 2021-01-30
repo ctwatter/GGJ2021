@@ -1,0 +1,33 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "9b8559eb-ece8-4712-83d1-65d7941b02d0",
+            "actions": [
+                {
+                    "name": "BabyButtonMash",
+                    "type": "Button",
+                    "id": "90720eba-f93d-4497-958a-cd8afab70a43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6e5ebc21-5f30-4c2d-8d06-a1daa1a1d20d",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BabyButtonMash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
