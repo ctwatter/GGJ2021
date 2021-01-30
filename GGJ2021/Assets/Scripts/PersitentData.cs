@@ -36,7 +36,8 @@ public class PersitentData : MonoBehaviour
         globalTimer.text = "" + cleanGlobalTimer;
         if(globalTimeLeft <= 0)
         {
-            SceneManager.LoadScene(SceneManager.sceneCount);
+            Debug.Log("END SCENE");
+            //SceneManager.LoadScene(SceneManager.sceneCount);
         }
 
     }
@@ -59,9 +60,31 @@ public class PersitentData : MonoBehaviour
         //"Ding!"
         Debug.Log("Succeed");
         successes++;
-        SceneManager.LoadScene(_scene);
+
+        
+        AsyncOperation loadNewScene;
+        try 
+        {
+            loadNewScene = SceneManager.LoadSceneAsync(_scene);
+        } 
+        catch 
+        {
+            Debug.LogError("COULD NOT LOAD SCENE WITH NAME :" + _scene);
+            yield break;
+        }
+
+        while (!loadNewScene.isDone)
+        {
+            //update some slider to show = loadNewScene.progress
+            yield return null;
+        }
+        inputHandler = GameObject.FindGameObjectWithTag("inputHandler");
+        Debug.Log(inputHandler);
+        inputHandler.SetActive(false);
+
     
         yield return StartCoroutine(FadeOutScreen(1));
+
         waitingForInput = true;
     }
 
@@ -71,10 +94,7 @@ public class PersitentData : MonoBehaviour
     {
         tutorialUI = GameObject.FindGameObjectWithTag("tutorialUI");
         tutorialUI.SetActive(false);
-        inputHandler = GameObject.FindGameObjectWithTag("inputHandler");
         inputHandler.SetActive(true);
-
-
     }
     
 

@@ -7,6 +7,7 @@ public class buttonMasher : MonoBehaviour
 {
     int buttonMashCount = 0;
     Slider slider;
+    bool oneShot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +18,16 @@ public class buttonMasher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(slider.value == slider.maxValue)
+        if(oneShot)
         {
-            PersitentData.Instance.outcome = 1;
+            if(slider.value == slider.maxValue)
+            {
+                PersitentData.Instance.randomNextScene();
+                oneShot = false;
             //Load random scene
+            }
         }
+
     }
 
     void OnBabyButtonMash()
