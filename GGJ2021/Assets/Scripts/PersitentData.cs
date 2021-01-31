@@ -16,6 +16,7 @@ public class PersitentData : MonoBehaviour
     public float globalTimeLeft;
     public bool start = false;
     public bool waitingForInput = false;
+    public int nextScene = 1;
 
     public int successes;
 
@@ -42,10 +43,10 @@ public class PersitentData : MonoBehaviour
 
     }
 
-    public void randomNextScene()
+    public void NextScene()
     {
-        var random = Random.Range(1, SceneManager.sceneCount);
-        LoadScene(random);
+        LoadScene(nextScene);
+        nextScene++;
     }
 
     public void LoadScene(int _scene)
