@@ -35,7 +35,7 @@ public class avoidMouse : MonoBehaviour
         if(Vector2.Distance(mousePosition, gameObject.transform.position) < 1)
         {
             Debug.Log("Clicked phone");
-            PersitentData.Instance.randomNextScene();
+            PersitentData.Instance.NextScene();
         }
     }
 }

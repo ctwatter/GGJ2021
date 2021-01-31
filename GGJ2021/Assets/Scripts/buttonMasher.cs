@@ -43,7 +43,7 @@ public class buttonMasher : MonoBehaviour
     void goNextGame()
     {
         StartCoroutine("wait");
-        PersitentData.Instance.randomNextScene();
+        PersitentData.Instance.NextScene();
 
     
     }
