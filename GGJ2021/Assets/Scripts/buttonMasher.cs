@@ -43,14 +43,12 @@ public class buttonMasher : MonoBehaviour
     void goNextGame()
     {
         StartCoroutine("wait");
-        PersitentData.Instance.NextScene();
-
-    
     }
 
     IEnumerator wait()
     {
         yield return new WaitForSeconds(2);
+        PersitentData.Instance.NextScene();
     }
 
     void OnBabyButtonMash()
