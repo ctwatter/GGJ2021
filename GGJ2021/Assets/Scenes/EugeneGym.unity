@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -313,37 +313,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 270426980}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &96388839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96388838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 380183feef4daf0459126679c71d5fc9,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!54 &96388840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -374,18 +343,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300018, guid: 9093dcf6b487b4445b317d8469e66af8, type: 3}
---- !u!114 &96388842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96388838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a076ec9850cf045b80170c3e7c06fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &151568375
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +653,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
+      propertyPath: m_TagString
+      value: seat
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
+      propertyPath: m_TagString
+      value: seat
+      objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_Name
       value: sofa_4
@@ -703,6 +668,10 @@ PrefabInstance:
     - target: {fileID: 100014, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
+      propertyPath: m_TagString
+      value: seat
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_LocalPosition.x
@@ -838,11 +807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.094
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.302
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1455,7 +1424,7 @@ GameObject:
   - component: {fileID: 458734344}
   m_Layer: 0
   m_Name: Remote
-  m_TagString: Untagged
+  m_TagString: remote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2285,37 +2254,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 270426980}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &891208123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891208122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 380183feef4daf0459126679c71d5fc9,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!54 &891208124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2346,18 +2284,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: 9093dcf6b487b4445b317d8469e66af8, type: 3}
---- !u!114 &891208126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891208122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a076ec9850cf045b80170c3e7c06fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &930932420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2483,8 @@ GameObject:
   - component: {fileID: 998242417}
   - component: {fileID: 998242420}
   - component: {fileID: 998242421}
+  - component: {fileID: 998242423}
+  - component: {fileID: 998242422}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2672,6 +2600,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44afae94378ecc409a9fc2ac651e342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &998242422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998242416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a076ec9850cf045b80170c3e7c06fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &998242423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998242416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 380183feef4daf0459126679c71d5fc9,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1013233938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,37 +2742,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 270426980}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1013794651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013794650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 380183feef4daf0459126679c71d5fc9,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!54 &1013794652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2832,18 +2772,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9093dcf6b487b4445b317d8469e66af8, type: 3}
---- !u!114 &1013794654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013794650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a076ec9850cf045b80170c3e7c06fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1046938124
 GameObject:
   m_ObjectHideFlags: 0
@@ -3512,7 +3440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1227264075
 MonoBehaviour:
   m_ObjectHideFlags: 0

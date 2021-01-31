@@ -7,6 +7,8 @@ TagManager:
   - inputHandler
   - tutorialUI
   - Gmawall
+  - seat
+  - remote
   layers:
   - Default
   - TransparentFX
