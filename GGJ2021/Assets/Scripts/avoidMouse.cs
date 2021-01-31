@@ -6,26 +6,36 @@ using UnityEngine.InputSystem;
 public class avoidMouse : MonoBehaviour
 {
     Vector2 mousePosition;
+    public int distanceToRunAway;
 
     // Start is called before the first frame update
     void Start()
     {
-        // mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(gameObject.transform.position, mousePosition) < 10)
+        if(Vector2.Distance(gameObject.transform.position, mousePosition) < distanceToRunAway)
         {
             Vector2 direciton = ((Vector2)gameObject.transform.position - mousePosition).normalized;
-            int knockbackAmount = 2;
+            float knockbackAmount = .1f;
             gameObject.transform.Translate(direciton * knockbackAmount);
         }
     }
 
-    void OnMousePosition(InputValue value)
+    void OnMousePos(InputValue value)
     {
-        mousePosition = value.Get<Vector2>();
+        mousePosition = Camera.main.ScreenToWorldPoint(value.Get<Vector2>());
+    }
+
+    void OnMouseClick()
+    {
+        if(Vector2.Distance(mousePosition, gameObject.transform.position) < 1)
+        {
+            Debug.Log("Clicked phone");
+            PersitentData.Instance.NextScene();
+        }
     }
 }

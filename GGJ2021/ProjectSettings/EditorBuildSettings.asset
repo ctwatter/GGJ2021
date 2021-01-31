@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BabyNoseMinigame.unity
     guid: 7916dd90180409d4ba92313d52489715
+  - enabled: 1
+    path: Assets/Scenes/lostGlasses.unity
+    guid: 3e4a832bf9459c541b99e69ec33b8219
   m_configObjects: {}
