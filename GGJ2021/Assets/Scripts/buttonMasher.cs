@@ -11,6 +11,7 @@ public class buttonMasher : MonoBehaviour
     public GameObject baby;
     public GameObject hand;
     public AudioSource cry;
+    bool ready = true;
     
 
     // Start is called before the first frame update
@@ -55,7 +56,7 @@ public class buttonMasher : MonoBehaviour
 
     void OnBabyButtonMash()
     {
-        if(oneShot)
+        if(oneShot && ready)
         {
         
             slider.value = buttonMashCount++;
