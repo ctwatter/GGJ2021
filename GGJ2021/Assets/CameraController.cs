@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 
 public class CameraController : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     public float moveValue;
     public Vector3 rotationVec;
     public float rotateSpeed = 75f;
@@ -54,8 +54,16 @@ public class CameraController : MonoBehaviour
 
             //trigger glasses animation -> transition to new scene
             //trigger sound
+            audioSource.Play();
             GlassesUI.GetComponent<Animator>().SetTrigger("fall");
+            StartCoroutine(waitToTransition());
         }
         
+    }
+
+    IEnumerator waitToTransition()
+    {
+        yield return new WaitForSeconds(2f); 
+        PersitentData.Instance.NextScene();
     }
 }
