@@ -9,6 +9,7 @@ public class PersitentData : MonoBehaviour
     private static PersitentData _instance;
     public static PersitentData Instance { get { return _instance; } }
 
+    public AudioSource audio;
     public CanvasGroup loadScreen;
     public GameObject tutorialUI;
     public GameObject inputHandler;
@@ -32,7 +33,7 @@ public class PersitentData : MonoBehaviour
 
     private void Update() {
 
-        globalTimeLeft -= Time.deltaTime;
+        globalTimeLeft += Time.deltaTime;
         var cleanGlobalTimer =  Mathf.Ceil(globalTimeLeft);
         globalTimer.text = "" + cleanGlobalTimer;
         if(globalTimeLeft <= 0)
@@ -47,6 +48,7 @@ public class PersitentData : MonoBehaviour
     {
         LoadScene(nextScene);
         nextScene++;
+        audio.Play();
     }
 
     public void LoadScene(int _scene)
@@ -81,7 +83,7 @@ public class PersitentData : MonoBehaviour
         }
         inputHandler = GameObject.FindGameObjectWithTag("inputHandler");
         Debug.Log(inputHandler);
-        inputHandler.SetActive(false);
+        //inputHandler.SetActive(false);
 
     
         yield return StartCoroutine(FadeOutScreen(1));

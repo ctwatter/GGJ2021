@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PhoneMinigame.unity
     guid: eb425594d75cb154798d9723c2c9f630
+  - enabled: 1
+    path: Assets/Scenes/EugeneGym.unity
+    guid: 8b570ed8d2e00f04aa51586e5cc86177
+  - enabled: 1
+    path: Assets/Scenes/end score.unity
+    guid: 63313d1e22d9c49439c0b26938526e1b
   m_configObjects: {}

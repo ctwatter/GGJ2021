@@ -11,6 +11,7 @@ public class MeshDetector : MonoBehaviour, IPointerDownHandler
 
     void addPhysicsRaycaster()
     {
+        Debug.Log("INIT RAYCASTER");
         PhysicsRaycaster physicsRaycaster = GameObject.FindObjectOfType<PhysicsRaycaster>();
         if (physicsRaycaster == null)
         {
