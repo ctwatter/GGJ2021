@@ -54,6 +54,7 @@ public class CameraController : MonoBehaviour
 
             //trigger glasses animation -> transition to new scene
             //trigger sound
+            GlassesUI.GetComponent<Animator>().SetTrigger("fall");
         }
         
     }
