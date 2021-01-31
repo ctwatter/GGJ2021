@@ -36,6 +36,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "CameraRotation",
+                    "type": "Value",
+                    "id": "9cbcdda2-a57e-4f98-a003-76e810fe0f7e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CameraForward",
+                    "type": "Button",
+                    "id": "9710b715-0c3c-40a1-ad3d-f6a20e4d09e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -69,28 +85,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "StartMinigame",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fde89368-6663-41cb-b360-1243acd7dfb8",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MousePos",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "492a1b14-94e7-4bbd-8725-6683379b0540",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
