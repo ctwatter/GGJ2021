@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1103,7 +1103,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a43f3a9b9f6c3834c8bfe1205138fb3b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.729
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1492,11 +1492,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: baby
-      objectReference: {fileID: 0}
-    - target: {fileID: 3017421547295837911, guid: 20dc07abd67831f4888807cc54fdbbf7,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7680910377381152256, guid: 20dc07abd67831f4888807cc54fdbbf7,
         type: 3}
